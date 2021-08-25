@@ -1,20 +1,16 @@
 const container = document.querySelector('.container')
-const span = document.getElementById('span')
+let botonSumar = document.querySelector('.btn-success')
+let botonRestar = document.querySelector('.btn-danger')
+const span = document.querySelector('.contador')
 let contador = 0
 
-
-
-container.addEventListener('click', (e) => {
-console.log(e.target.classlist.contains('btn-success'))
-
-if(e.target.classlist.contains('btn-success')){
-    contador ++
-    span.textContent = contador
-}
-
-if(e.target.classlist.contains('btn-danger')){
+botonRestar.addEventListener('click', (e) =>{
+    console.log(e.target)
     contador --
     span.textContent = contador
-}
+})
 
+botonSumar.addEventListener('click', (e) => {
+    contador ++
+    span.textContent = contador
 })
